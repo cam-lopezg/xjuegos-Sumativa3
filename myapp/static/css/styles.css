@@ -1,0 +1,206 @@
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #06051a;
+}
+
+header {
+    background-color: #0b0f20;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    white-space: nowrap; 
+}
+
+footer {
+    background-color: #0b0f20;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #06051a;
+    padding: 10px;
+}
+
+nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+section {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #12042c;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+header {
+    background-image: url(../img/fondo2.gif);
+    background-size: 800px 400px;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 200px;
+}
+
+.colored-letter {
+    display: inline;
+    font-weight: bold;
+}
+
+.letter-x {
+    color: red;
+}
+
+.letter-j {
+    color: yellow;
+}
+
+.letter-u {
+    color: rgb(43, 255, 0);
+}
+
+.letter-e {
+    color: rgb(25, 0, 255);
+}
+
+.letter-g {
+    color: rgb(0, 247, 255);
+}
+
+.letter-o {
+    color: rgb(255, 0, 234);
+}
+
+.letter-s {
+    color: rgb(255, 255, 255);
+}
+nav {
+    margin-top: 20px;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+nav img {
+    width: 300px;
+    height: 250px;
+    border: 1px solid #3b3b3b;
+}
+
+nav a span {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(220, 250, 255);
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+
+
+@media (max-width: 767.98px) {
+    nav {
+        flex-direction: column;
+    }
+}
+
+.navigation-menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.navigation-menu button {
+    margin-left: 10px;
+    padding: 8px 12px;
+    background-color: #0b0f20;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para el botón de registro */
+
+
+/* Estilo para el botón de inicio de sesión */
+#login {
+    background-color: #0b0f20;
+}
+
+/* Estilo para el tercer botón personalizado */
+
+
+/* Estilos para el icono del carrito */
+.fas.fa-shopping-cart {
+    margin-right: 5px;
+}
+
+/* Estilos para el contador de elementos en el carrito */
+#cartItemCount {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 5px;
+    font-size: 0.8em;
+}
+
+/* Estilos para los elementos del carrito */
+#carrito-lista li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+}
+
+#total {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 20px;
+}
+/* Estilos para los elementos del carrito */
+#carrito-lista {
+    list-style-type: none; /* Elimina los puntos de lista */
+    padding: 0;
+}
+
+#carrito-lista li {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: white; /* Cambia el color del texto a blanco */
+    text-align: center; /* Centra el texto */
+}
+
+.logo-button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px; /* Ajusta según sea necesario */
+    padding: 0;
+    border: none;
+    background: none;
+}
+
+.logo-image {
+    width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+    height: auto;
+}

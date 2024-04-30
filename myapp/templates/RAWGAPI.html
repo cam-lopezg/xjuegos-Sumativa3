@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INFORMACIÓN DE JUEGOS</title>
+    <script src="../static/js/logo.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #06051a;
+        color: white;
+        text-align: center;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 50px auto;
+        background-color: #06051a;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .centered-image {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .description {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .bottom-text {
+        margin-top: 20px;
+      }
+      .top-left-button,
+      .top-right-button {
+        position: absolute;
+        top: 10px;
+        padding: 10px;
+        background-color: #0d092b;
+        color: white;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .top-left-button {
+        left: 110px;
+      }
+
+      .top-right-button {
+        right: 10px;
+      }
+    </style>
+    <a href="/principal" id="logoButton" class="logo-button">
+      <img src="../static/img/LogoX.png" alt="Logo" class="logo-image" />
+    </a>
+    <style>
+      .logo-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px; /* Ajusta según sea necesario */
+        padding: 0;
+        border: none;
+        background: none;
+      }
+
+      .logo-image {
+        width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+        <h2>Listado de juegos </h2>
+        <div class="row" id="juegos"></div>
+    </div>
+    <script>
+      $(document).ready(function(){
+        const URL = "https://api.rawg.io/api/games?key=4249f72312ad46eab2753c6884ffef02";
+        var id_juegos = $("#juegos");
+        
+  
+        function addJuego(juego){
+          id_juegos.append(
+            `
+            <div class="col-md-4">
+              <div class="card" style="width: 18rem;">
+                <img src="${juego.background_image}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">${juego.name}</h5>
+                  <p class="card-text">Fecha de lanzamiento: ${juego.released}</p>
+                </div>
+              </div> 
+            </div>
+            `
+          )
+        }
+        function obtenerJuegos(){
+          $.ajax({
+            url: URL,
+            method: "GET",
+            success: function(data){
+              console.log(data.results);
+              var juegos = data.results;
+              juegos.forEach(addJuego);
+            }
+          })
+        }
+        obtenerJuegos();
+      });
+    </script>
+  </body>
+</html>

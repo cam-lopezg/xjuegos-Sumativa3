@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>XJUEGOS - Página Principal</title>
+        <script src="../static/js/logo.js" defer></script>
+        
+        <style>
+            body {
+                font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #06051a; 
+            }
+    
+            header {
+                background-color: #0b0f20;
+                color: white;
+                text-align: center;
+                padding: 1em;
+                white-space: nowrap; 
+            }
+    
+            nav {
+                display: flex;
+                justify-content: center;
+                background-color: #06051a;
+                padding: 10px;
+            }
+    
+            nav a {
+                margin: 0 15px;
+                text-decoration: none;
+                color: #333;
+                font-weight: bold;
+            }
+    
+            section {
+                max-width: 800px;
+                margin: 20px auto;
+                padding: 20px;
+                background-color: #12042c;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 8px;
+            }
+    
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: 8px;
+            }
+        </style>
+                        <button id="logoButton" class="logo-button">
+                            <img src="../static/img/LogoX.png" alt="Logo" class="logo-image">
+                        </button>
+                        <style>
+                                 .logo-button {
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            margin: 10px; 
+                            padding: 0;
+                            border: none;
+                            background: none;
+                        }
+                        
+                        .logo-image {
+                            width: 100px; 
+                            height: auto;
+                        }   
+                        </style>
+    </head>
+    <body>
+        <style>
+            header {
+            background-image: url(../static/img/fondo2.gif); 
+            background-size: 800px 400px;
+            background-repeat: no-repeat; 
+            background-position: center; 
+            color: white; 
+            text-align: center;
+            padding: 200px; 
+        }
+            .colored-letter {
+                display: inline;
+                font-weight: bold;
+            }
+        
+            .letter-a { color: red; }
+            .letter-v { color: yellow; }
+            .letter-e { color: rgb(43, 255, 0); }
+            .letter-n { color: rgb(25, 0, 255); }
+            .letter-t { color: rgb(0, 247, 255); }
+            .letter-u { color: rgb(255, 0, 234); }
+            .letter-r { color: rgb(255, 255, 255); }
+            .letter-a { color: rgb(0, 255, 55); }
+
+            .corner-button {
+            position: fixed;
+            background-color: #06051a;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .top-left {
+            top: 10px;
+            left: 110px;
+        }
+
+        .top-right {
+            top: 10px;
+            right: 10px;
+        }
+            
+        </style>
+        <a href="/Categoria1" class="corner-button top-left">Categoría anterior</a>
+        <a href="/Categoria3" class="corner-button top-right">Siguiente categoria</a>
+        <header>
+            <h1 class="colored-letter letter-a">A</h1>
+            <h1 class="colored-letter letter-v">V</h1>
+            <h1 class="colored-letter letter-e">E</h1>
+            <h1 class="colored-letter letter-n">N</h1>
+            <h1 class="colored-letter letter-t">T</h1>
+            <h1 class="colored-letter letter-u">U</h1>
+            <h1 class="colored-letter letter-r">R</h1>
+            <h1 class="colored-letter letter-a">A</h1>
+          
+        </header>
+        
+        
+        
+     
+    
+        <style>
+            nav a {
+                display: block;
+                text-decoration: none;
+                text-align: center;
+                margin-bottom: 20px;
+                position: relative;
+            }
+        
+            nav img {
+                width: 400px; 
+                height: 300px; 
+                border: 1px solid #3b3b3b; 
+            }
+        
+            nav a span {
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: rgb(220, 250, 255);
+                font-weight: bold;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            }
+            nav a .top-text {
+                top: 5px; 
+            }
+
+            nav a .bottom-text {
+                bottom: 2000px; 
+            }
+        </style>
+        
+        <nav>
+            
+            <a href="/juego2">
+                <img src="../static/img/baldur.jpg" alt="Baldur's Gate 3">
+                <span class="top-text">Baldur's Gate 3</span>
+                <span class="bottom-text">20.000 CLP</span>
+            </a>
+            <a href="/juego2dos">
+                <img src="../static/img/core.jpg" alt="Core Keeper">
+                <span class="top-text">Core Keeper</span>
+                <span class="bottom-text">4.000 CLP</span>
+            </a>
+           
+        </nav>
+    
+        
+       
+    </body>
+</html>

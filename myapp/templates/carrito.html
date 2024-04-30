@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras</title>
+
+
+    <link rel="stylesheet" href="../static/css/styles.css"> <!-- Agrega tus estilos CSS aquí -->
+    <script src="../static/js/carrito.js" defer></script> <!-- Agrega tu script JavaScript aquí -->
+    <script src="../static/js/logo.js" defer></script>
+    <link rel="shortcut icon" href="../static/img/LogoX.png" />
+
+
+    <style>
+        /* Estilos para el título */
+        h1 {
+            text-align: center;
+            /* Centra el texto */
+            color: white;
+            /* Color de la fuente blanco */
+        }
+
+        /* Estilos para la lista del carrito */
+        #carrito-lista {
+            list-style-type: none;
+            /* Elimina los puntos de lista */
+            padding: 0;
+            text-align: center;
+            /* Centra el texto */
+            color: white;
+            /* Color de la fuente blanco */
+        }
+
+        /* Estilos para el total */
+        #total {
+            text-align: center;
+            /* Centra el texto */
+            color: white;
+            /* Color de la fuente blanco */
+        }
+
+        #carrito-lista {
+            list-style-type: none;
+            /* Elimina los puntos de lista */
+            padding: 0;
+            text-align: center;
+            /* Centra el texto */
+            color: white;
+            /* Color de la fuente blanco */
+        }
+
+        /* Estilos para el total */
+        #total {
+            text-align: center;
+            /* Centra el texto */
+            color: white;
+            /* Color de la fuente blanco */
+        }
+
+        /* Estilos para los botones */
+        .boton-carrito {
+            display: block;
+            margin: 10px auto;
+            /* Centra horizontalmente */
+            padding: 10px 20px;
+            background-color: #0d092b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="colored-letter letter-x">X</h1>
+        <h1 class="colored-letter letter-j">J</h1>
+        <h1 class="colored-letter letter-u">U</h1>
+        <h1 class="colored-letter letter-e">E</h1>
+        <h1 class="colored-letter letter-g">G</h1>
+        <h1 class="colored-letter letter-o">O</h1>
+        <h1 class="colored-letter letter-s">S</h1>
+
+        <a href="/principal">
+            <img src="../static/img/LogoX.png" alt="Logo" class="logo-image">
+        </a>
+
+
+
+    </header>
+    <h1>Carrito de Compras</h1>
+    <ul id="carrito-lista">
+        {% for item in productos %}
+        <li>{{ item.nombre }} - {{ item.cantidad }} x ${{ item.precio }} = ${{ item.subtotal }}</li>
+        {% empty %}
+        <li>No hay productos en el carrito.</li>
+        {% endfor %}
+    </ul>
+
+    <p id="total">Total: ${{ total }}</p>
+    <button id="limpiarLista" class="boton-carrito">Limpiar Lista</button>
+    <button id="pagar" class="boton-carrito">Pagar</button>
+    <style>
+        #carrito-lista {
+            list-style-type: none;
+            /* Elimina los puntos de lista */
+            padding: 0;
+        }
+
+        #carrito-lista li {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+            color: white;
+            /* Cambia el color del texto a blanco */
+            text-align: center;
+            /* Centra el texto */
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const botonLimpiar = document.getElementById('limpiarLista');
+            const botonPagar = document.getElementById('pagar');
+
+            botonLimpiar.addEventListener('click', function () {
+                window.location.href = '/carrito/limpiar/';
+            });
+
+            botonPagar.addEventListener('click', function () {
+                window.location.href = '/carrito/pagar/';
+            });
+        });
+    </script>
+</body>
+
+</html>

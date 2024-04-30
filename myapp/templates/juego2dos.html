@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CORE KEEPER</title>
+    <script src="../static/js/logo.js" defer></script>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #06051a;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            background-color: #06051a;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .centered-image {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .description {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .bottom-text {
+            margin-top: 20px;
+        }
+        .top-left-button,
+        .top-right-button {
+            position: absolute;
+            top: 10px;
+            padding: 10px;
+            background-color: #0d092b; 
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .top-left-button {
+            left: 110px;
+        }
+
+        .top-right-button {
+            right: 10px;
+        }
+    </style>
+    <button id="logoButton" class="logo-button">
+        <img src="../static/img/LogoX.png" alt="Logo" class="logo-image">
+    </button>
+    <style>
+             .logo-button {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 10px; /* Ajusta según sea necesario */
+        padding: 0;
+        border: none;
+        background: none;
+    }
+    
+    .logo-image {
+        width: 100px; /* Ajusta el tamaño de la imagen según sea necesario */
+        height: auto;
+    }   
+    </style>
+</head>
+<body>
+    <a href="/Categoria2" class="top-left-button">Volver a AVENTURA</a>
+    <a href="/juego3" class="top-right-button">Siguiente Juego</a>
+    <div class="container">
+        <img class="centered-image" src="../static/img/core.jpg" alt="Descripción de la imagen">
+
+        <div class="description">
+            <h2>CORE KEEPER</h2>
+            <p>
+                Explora una caverna infinita llena de criaturas, reliquias y recursos en una aventura minera de tipo «sandbox» para 1-8 jugadores. Extrae recursos, construye, lucha, fabrica y cultiva para desentrañar el misterio del antiguo Núcleo.
+            </p>
+        </div>
+
+        <div class="bottom-text">
+            <p>
+                 $4.000 CLP
+            </p>
+            <a href="{% url 'agregar_al_carrito' %}?nombre=CoreKeeper&precio=4000" class="boton-carrito">Agregar al carrito</a>
+        </div>
+    </div>
+    <ul id="carrito-lista">
+        <!-- Aquí se mostrarán los elementos agregados al carrito -->
+    </ul>
+    <p id="total">Total: $0</p>
+    <a href="/carrito" class="boton-carrito">Ir al carrito</a>
+    <script src="../static/js/carrito.js" defer></script>
+</body>
+</html>

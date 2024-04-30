@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Perfil</title>
+    <!-- Incluir Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Editar Perfil</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre:</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" value="{{ user.nombre }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="nickname" class="form-label">Nickname:</label>
+                <input type="text" class="form-control" id="nickname" name="nickname" value="{{ user.nickname }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Nueva Contraseña (opcional):</label>
+                <input type="password" class="form-control" id="password" name="password">
+            </div>
+            <button type="submit" class="btn btn-primary">Actualizar</button>
+        </form>
+    </div>
+</body>
+</html>
